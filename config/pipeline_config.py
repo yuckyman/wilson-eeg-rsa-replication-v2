@@ -36,6 +36,36 @@ FEATURE_EXTRACTION = {
         'theta': (4, 8),
         'alpha': (8, 13),
         'beta': (13, 30),
+        'gamma': (30, 40),
+    },
+}
+
+# Representation method parameters for RSA analysis
+REPRESENTATION_METHODS = {
+    'methods': [
+        'power_bands',
+        'channels',
+        'channel_x_band',
+        'time_windows',
+        'erp_features',
+        'time_frequency',
+    ],
+    'frequency_bands': {
+        'delta': (1, 4),
+        'theta': (4, 8),
+        'alpha': (8, 13),
+        'beta': (13, 30),
+        'gamma': (30, 40),
+    },
+    'time_windows': [
+        (0.0, 0.3),   # Early window
+        (0.3, 0.6),   # Late window
+    ],
+    'erp_time_window': (0.0, 0.6),  # Full epoch for ERP features
+    'time_frequency': {
+        'freqs': None,  # None = auto (2-40 Hz in 2 Hz steps)
+        'time_window': None,  # None = all time
+        'average_time': True,
     },
 }
 
